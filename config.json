@@ -1,0 +1,9 @@
+{
+    "m":"onecase",
+    "p":"testcase.test_user.TestUsers.test_user_basecase",
+    "n":"",
+    "r":"text",
+    "o":"./utest/report/report1.html",
+    "j":"./SkiSetting.json",
+    "report.addtime.now":true
+}

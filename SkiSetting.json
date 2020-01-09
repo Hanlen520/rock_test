@@ -1,0 +1,26 @@
+{
+    "routers":{
+        "userkw_sendmsg":"driver.send.askbaidu",
+        "Create Session":"RequestsLibrary.RequestsLibrary.create_session",
+        "Get Request":"RequestsLibrary.RequestsLibrary.get_request",
+        "input text":"Selenium2Library.Selenium2Library.input_text",
+        "click button":"Selenium2Library.Selenium2Library.click_button",
+        "Open Browser":"Selenium2Library.Selenium2Library.open_browser",
+        "login":"keywords.login.login",
+        "getUserList":"keywords.user.getUserList",
+        "getOneUser":"keywords.user.read_user",
+        "getCreateUser":"keywords.user.add_user",
+        "getUpdataUser":"keywords.user.update_user",
+        "getDeleteUser":"keywords.user.delete_user"
+    },
+    "global_variable":{
+        "BASE_URL":"http://demo.xufqing.cn",
+        "logfile_path":"log/log.log",
+        "log_level":"info"
+    },
+    "datatable":{
+        "db_type":"excel",
+        "db_path":"./testdata/testdata.xlsx"
+    }
+
+}
