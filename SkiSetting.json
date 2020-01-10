@@ -11,7 +11,11 @@
         "getOneUser":"keywords.user.read_user",
         "getCreateUser":"keywords.user.add_user",
         "getUpdataUser":"keywords.user.update_user",
-        "getDeleteUser":"keywords.user.delete_user"
+        "getDeleteUser":"keywords.user.delete_user",
+		"getCreateMenu":"keywords.menu.add_menu",
+		"getOneMenu":"keywords.menu.read_menu",
+		"getUpdataMenu":"keywords.menu.update_menu",
+		"getDeleteMenu":"keywords.menu.delete_menu"
     },
     "global_variable":{
         "BASE_URL":"http://demo.xufqing.cn",
@@ -20,7 +24,7 @@
     },
     "datatable":{
         "db_type":"excel",
-        "db_path":"./testdata/testdata.xlsx"
+        "db_path":".//testdata//testdata.xlsx"
     }
 
 }
