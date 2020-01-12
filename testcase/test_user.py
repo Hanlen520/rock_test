@@ -9,7 +9,7 @@ class TestUsers(unittest.TestCase,Ski):
 
     def setUp(self):
         self.logger=logging.getLogger("TestUsers")
-        self.step("login",{"username": "admin","password": "admin@1234"})
+        self.step("login",DT("login.admin").json()['detail'])
 
     def tearDown(self):
         pass

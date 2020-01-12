@@ -1,0 +1,95 @@
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Hello, Bootstrap Table!</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+      </head>
+      <body>
+      <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+          <h1 class="display-4">BearSki 自动化测试报告</h1>
+          <p class="lead"></p>
+          <p class="lead">执行结果汇总:
+    
+    <span class="badge badge-success">Pass</span> &ensp;4 &ensp;<span class="badge badge-warning">Failure</span>  &ensp;0&ensp;
+          <span class="badge badge-danger">Error</span> &ensp; 0 </p>
+    
+        </div>
+        </div>
+        <h3>用例执行情况：</h3>
+        <HR  align=left width=500 color=#987cb9 SIZE=1/>
+        <div width=400>
+        <table id="table"
+        data-toolbar="#toolbar"
+      data-search="true"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-show-columns-toggle-all="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-click-to-select="true"
+      data-detail-formatter="detailFormatter"
+      data-minimum-count-columns="2"
+      data-show-pagination-switch="true"
+      data-pagination="true"
+      data-id-field="id"
+      data-page-list="[10, 25, 50, 100, all]"
+      data-show-footer="true"
+        >
+      <thead>
+        <tr>
+          <th data-field="id">ID</th>
+          <th data-field="suitname">SUITNAME</th>
+          <th data-field="casename">CASENAME</th>
+          <th data-field="result">RESULT</th>
+        </tr>
+      </thead>
+    </table>
+    </div>
+    </div>
+    <script>
+
+      var $table = $('#table')
+      $(function() {
+        var data = 
+      [{'id': 1, 'suitname': 'test_login.TestLogin', 'casename': 'test_login', 'result': '<p class="text-success">pass</p>', 'message': ['<a class="text-secondary">2020-01-12 18:12:59,225&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestLogin]&nbsp;</a><a class="text-secondary">&nbsp; in login</a>', '<a class="text-secondary">2020-01-12 18:12:59,900&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : &lt;Response [200]&gt;</a>', '<a class="text-secondary">2020-01-12 18:12:59,906&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":200,"message":"成功","detail":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTc5MDgzMTc5LCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.iRaeOotepfQDAfrFe7vr6tZyMvbCDo0-cy8WHdP4lkI"}}</a>', '<a class="text-secondary">2020-01-12 18:12:59,911&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestLogin]&nbsp;</a><a class="text-secondary">&nbsp; login res &lt;BearSki.base.Ski.step object at 0x10c978fd0&gt;</a>']}, {'id': 2, 'suitname': 'test_menu.TestMenus', 'casename': 'test_menu_basecase', 'result': '<p class="text-success">pass</p>', 'message': ['<a class="text-secondary">2020-01-12 18:12:59,932&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; {\'username\': \'admin\', \'password\': \'AgaveTest@5567\'}</a>', '<a class="text-secondary">2020-01-12 18:13:00,206&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : &lt;Response [200]&gt;</a>', '<a class="text-secondary">2020-01-12 18:13:00,212&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":200,"message":"成功","detail":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTc5MDgzMTgwLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9._F-H8x48n0nwjZLkBaQQvvah70_Fk8rVg8QSK556DNU"}}</a>', '<a class="text-secondary">2020-01-12 18:13:00,217&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; 开始测试 test_menu_basecase</a>', '<a class="text-secondary">2020-01-12 18:13:00,244&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; 获取待替新增菜单数据: {\'dataid\': \'onemenu\', \'remark\': \'正确的菜单名\', \'detail\': {\'name\': \'test35231614\', \'sort\': \'999\', \'path\': \'http://www.baidu.com\', \'component\': \'http://www.baidu.com\', \'is_show\': \'true\', \'is_frame\': \'False\', \'icon\': \'add\'}}</a>', '<a class="text-secondary">2020-01-12 18:13:00,244&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; Step1: 新建菜单</a>', '<a class="text-secondary">2020-01-12 18:13:00,274&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":32,"name":"test35231614","icon":"add","path":"http://www.baidu.com","is_show":true,"is_frame":false,"sort":999,"component":"http://www.baidu.com","pid":null}</a>', '<a class="text-secondary">2020-01-12 18:13:00,274&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; Step2: 查询新建菜单信息</a>', '<a class="text-secondary">2020-01-12 18:13:00,298&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":32,"name":"test35231614","icon":"add","path":"http://www.baidu.com","is_show":true,"is_frame":false,"sort":999,"component":"http://www.baidu.com","pid":null}</a>', '<a class="text-secondary">2020-01-12 18:13:00,299&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; Step3: 修改菜单 修改信息{\'dataid\': \'onemenu\', \'remark\': \'正确的菜单名\', \'detail\': {\'name\': \'test988\', \'sort\': \'999\', \'path\': \'http://www.baidu.com\', \'component\': \'http://www.baidu.com\', \'is_show\': \'true\', \'is_frame\': \'False\', \'icon\': \'add\'}}</a>', '<a class="text-secondary">2020-01-12 18:13:00,329&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":32,"name":"test988","icon":"add","path":"http://www.baidu.com","is_show":true,"is_frame":false,"sort":999,"component":"http://www.baidu.com","pid":null}</a>', '<a class="text-secondary">2020-01-12 18:13:00,329&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; Step4: 查询修改菜单信息</a>', '<a class="text-secondary">2020-01-12 18:13:00,432&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":32,"name":"test988","icon":"add","path":"http://www.baidu.com","is_show":true,"is_frame":false,"sort":999,"component":"http://www.baidu.com","pid":null}</a>', '<a class="text-secondary">2020-01-12 18:13:00,433&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; Step5: 菜单</a>', '<a class="text-secondary">2020-01-12 18:13:00,462&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : </a>', '<a class="text-secondary">2020-01-12 18:13:00,462&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestMenus]&nbsp;</a><a class="text-secondary">&nbsp; Step6: 查询删除菜单信息</a>', '<a class="text-secondary">2020-01-12 18:13:00,495&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":404,"message":"失败","detail":{"detail":"未找到。"}}</a>']}, {'id': 3, 'suitname': 'test_user.TestUsers', 'casename': 'test_getuserlist', 'result': '<p class="text-success">pass</p>', 'message': ['<a class="text-secondary">2020-01-12 18:13:00,782&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : &lt;Response [200]&gt;</a>', '<a class="text-secondary">2020-01-12 18:13:00,787&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":200,"message":"成功","detail":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTc5MDgzMTgwLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9._F-H8x48n0nwjZLkBaQQvvah70_Fk8rVg8QSK556DNU"}}</a>', '<a class="text-secondary">2020-01-12 18:13:00,792&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; in getUserinfo heasers is :{\'Content-Type\': \'application/json\', \'Authorization\': \'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTc5MDgzMTgwLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9._F-H8x48n0nwjZLkBaQQvvah70_Fk8rVg8QSK556DNU\'}</a>', '<a class="text-secondary">2020-01-12 18:13:00,828&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"count":3,"next":null,"previous":null,"results":[{"id":1,"username":"admin","name":"管理员","mobile":"","email":"admin@admin.com","image":"http://localhost:8089/media/image/default.jpg","department":null,"position":null,"superior":null,"is_active":true,"roles":[{"id":1,"name":"系统管理员","desc":"系统默认管理员"}]},{"id":2,"username":"testuser","name":"testuser","mobile":"13788989999","email":"testuser@qiyi.com","image":"http://localhost:8089/media/image/default.jpg","department":{"id":1,"name":"深圳奇仪科技","type":"company","pid":null},"position":"测试工程师","superior":null,"is_active":true,"roles":[{"id":3,"name":"测试工程师","desc":""}]},{"id":3,"username":"test6622","name":"test9528","mobile":"13763338049","email":"test9527@154.com","image":"http://localhost:8089/media/image/default.jpg","department":{"id":1,"name":"深圳奇仪科技","type":"company","pid":null},"position":"","superior":null,"is_active":true,"roles":[{"id":2,"name":"开发工程师","desc":""}]}]}</a>']}, {'id': 4, 'suitname': 'test_user.TestUsers', 'casename': 'test_user_basecase', 'result': '<p class="text-success">pass</p>', 'message': ['<a class="text-secondary">2020-01-12 18:13:01,090&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : &lt;Response [200]&gt;</a>', '<a class="text-secondary">2020-01-12 18:13:01,096&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.login]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":200,"message":"成功","detail":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTc5MDgzMTgxLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.V9Kh_iBnBptXSJJJGjXMhmGFch0dhjUeEhcJzJcTIAo"}}</a>', '<a class="text-secondary">2020-01-12 18:13:01,102&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; 开始测试 test_user_basecase</a>', '<a class="text-secondary">2020-01-12 18:13:01,130&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; 获取待替新增用户数据: {\'dataid\': \'oneuser\', \'remark\': \'正确的用户名\', \'detail\': {\'username\': \'test5543\', \'name\': \'test9528\', \'mobile\': \'13736141534\', \'department\': \'1\', \'superior\': \'2\', \'position\': \'\', \'email\': \'test9527@154.com\', \'is_active\': \'true\', \'roles\': [2]}}</a>', '<a class="text-secondary">2020-01-12 18:13:01,130&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; Step1: 新建用户</a>', '<a class="text-secondary">2020-01-12 18:13:01,416&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":201,"message":"成功","detail":{"id":7,"username":"test5543","name":"test9528","mobile":"13736141534","email":"test9527@154.com","department":1,"position":"","is_active":true,"roles":[2],"password":"pbkdf2_sha256$150000$fdm07JSpVow8$Vcfji9YEJuK3g7aMeMUDRhX3aHK9ivtZYAWlACurbfQ="}}</a>', '<a class="text-secondary">&lt;BearSki.base.Ski.step object at 0x10d295588&gt;&nbsp;</a>', '<a class="text-secondary">2020-01-12 18:13:01,421&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; Step2: 查询新建用户信息</a>', '<a class="text-secondary">2020-01-12 18:13:01,449&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":7,"username":"test5543","name":"test9528","mobile":"13736141534","email":"test9527@154.com","image":"http://localhost:8089/media/image/default.jpg","department":1,"position":"","superior":null,"is_active":true,"roles":[2]}</a>', '<a class="text-secondary">2020-01-12 18:13:01,449&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; Step3: 修改用户 修改信息{\'dataid\': \'oneuser\', \'remark\': \'正确的用户名\', \'detail\': {\'username\': \'test5543\', \'name\': \'test987\', \'mobile\': \'13736141534\', \'department\': \'1\', \'superior\': \'2\', \'position\': \'\', \'email\': \'test9527@154.com\', \'is_active\': \'true\', \'roles\': [2]}}</a>', '<a class="text-secondary">2020-01-12 18:13:01,493&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":7,"username":"test5543","name":"test987","mobile":"13736141534","email":"test9527@154.com","image":"http://localhost:8089/media/image/default.jpg","department":1,"position":"","superior":2,"is_active":true,"roles":[2]}</a>', '<a class="text-secondary">2020-01-12 18:13:01,493&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; Step4: 查询修改用户信息</a>', '<a class="text-secondary">2020-01-12 18:13:01,519&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"id":7,"username":"test5543","name":"test987","mobile":"13736141534","email":"test9527@154.com","image":"http://localhost:8089/media/image/default.jpg","department":1,"position":"","superior":2,"is_active":true,"roles":[2]}</a>', '<a class="text-secondary">2020-01-12 18:13:01,519&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; Step5: 删除用户</a>', '<a class="text-secondary">2020-01-12 18:13:01,553&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : </a>', '<a class="text-secondary">2020-01-12 18:13:01,553&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[TestUsers]&nbsp;</a><a class="text-secondary">&nbsp; Step6: 查询删除用户信息</a>', '<a class="text-secondary">2020-01-12 18:13:01,580&nbsp;</a><span class="badge badge-info">INFO</span><a class="text-primary">&nbsp;[kw.user]&nbsp;</a><a class="text-secondary">&nbsp; response is : {"code":404,"message":"失败","detail":{"detail":"未找到。"}}</a>']}]
+        $table.bootstrapTable({data: data})
+      })
+
+    </script>
+    <script>
+      function detailFormatter(index, row) {
+        var html = []
+        $.each(row, function (key, value) {
+          if(key=='message'){
+            
+            for(line in value){
+                html.push('<p><b>' + value[line] + '</p>')
+            }
+              
+            
+            
+          }
+        
+        })
+        return html.join('')
+      }
+    </script>
+
+      </body>
+    </html>
+    

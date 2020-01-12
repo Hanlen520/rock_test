@@ -5,19 +5,15 @@ import logging
 from BearSki.base import DT
 import json
 
-class TestUsers(unittest.TestCase,Ski):
+class TestMenus(unittest.TestCase,Ski):
 
     def setUp(self):
-        self.logger=logging.getLogger("TestUsers")
-        self.step("login",{"username": "admin","password": "admin@1234"})
+        self.logger=logging.getLogger("TestMenus")
+        self.logger.info(DT("login.admin").json()['detail'])
+        self.step("login",DT("login.admin").json()['detail'])
 
     def tearDown(self):
         pass
-    @Ski.case()
-    def test_getuserlist(self):
-        res=self.step("getUserList",{'name':'admin'})
-        self.assertEqual(200,res.result.status_code)
-
 
     @Ski.case()
     def test_menu_basecase(self):

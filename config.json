@@ -1,9 +1,9 @@
 {
-    "m":"onecase",
-    "p":"testcase.test_menu.TestUsers.test_menu_basecase",
-    "n":"",
-    "r":"text",
-    "o":"./utest/report/report1.html",
+    "m":"allcase",
+    "p":"./testcase",
+    "n":"test_*",
+    "r":"html",
+    "o":"./report/report1.html",
     "j":"./SkiSetting.json",
     "report.addtime.now":true
 }

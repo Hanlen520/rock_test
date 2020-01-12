@@ -18,7 +18,7 @@
 		"getDeleteMenu":"keywords.menu.delete_menu"
     },
     "global_variable":{
-        "BASE_URL":"http://demo.xufqing.cn",
+        "BASE_URL":"http://localhost:8089",
         "logfile_path":"log/log.log",
         "log_level":"info"
     },

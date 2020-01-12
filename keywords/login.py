@@ -3,7 +3,7 @@ import logging
 from BearSki.CommonData import SkiGlobalData
 from driver import d_requests
 
-logger=logging.getLogger("kw.user")
+logger=logging.getLogger("kw.login")
 BASE_URL=SkiGlobalData().get_global_data('BASE_URL')
 
 # 提供通过用户名获取jwt的接口信息方法，获取后的认证字符串放在 SkiGlobalData 全局变量中
