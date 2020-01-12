@@ -1,6 +1,6 @@
 {
     "m":"onecase",
-    "p":"testcase.test_user.TestUsers.test_user_basecase",
+    "p":"testcase.test_menu.TestUsers.test_menu_basecase",
     "n":"",
     "r":"text",
     "o":"./utest/report/report1.html",
