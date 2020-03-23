@@ -1,9 +1,10 @@
 {
     "m":"allcase",
-    "p":"./testcase",
-    "n":"test_*",
-    "r":"html",
-    "o":"./report/report1.html",
+    "p":"testcase",
+    "n":"",
+    "r":"text",
+    "o":"./report/report.html",
     "j":"./SkiSetting.json",
-    "report.addtime.now":true
+    "report.addtime.now":true,
+    "testsuit.runner": "PyTestRunner"
 }

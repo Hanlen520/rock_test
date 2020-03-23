@@ -1,16 +1,16 @@
 import time
 import unittest
-from BearSki.base import Ski
+from BearSki.core import Ski
 import logging
-from BearSki.base import DT
+from BearSki.core import DT
 import json
 
 class TestMenus(unittest.TestCase,Ski):
 
     def setUp(self):
         self.logger=logging.getLogger("TestMenus")
-        self.logger.info(DT("login.admin").json()['detail'])
-        self.step("login",DT("login.admin").json()['detail'])
+        self.logger.info(DT.excel("login.admin")['detail'])
+        self.step("login",DT.excel("login.admin")['detail'])
 
     def tearDown(self):
         pass
@@ -19,7 +19,7 @@ class TestMenus(unittest.TestCase,Ski):
     def test_menu_basecase(self):
         self.logger.info("开始测试 test_menu_basecase")
         role_user = {'name': 'admin'}
-        user_data = DT("menus.onemenu").json()
+        user_data = DT.excel("menus.onemenu")
         self.logger.info("获取待替新增菜单数据: {0}".format(user_data))
 
         self.logger.info("Step1: 新建菜单")

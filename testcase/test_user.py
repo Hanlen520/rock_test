@@ -1,15 +1,15 @@
 import time
 import unittest
-from BearSki.base import Ski
+from BearSki.core import Ski
 import logging
-from BearSki.base import DT
+from BearSki.core import DT
 import json
 
 class TestUsers(unittest.TestCase,Ski):
 
     def setUp(self):
         self.logger=logging.getLogger("TestUsers")
-        self.step("login",DT("login.admin").json()['detail'])
+        self.step("login",DT.excel("login.admin")['detail'])
 
     def tearDown(self):
         pass
@@ -23,7 +23,7 @@ class TestUsers(unittest.TestCase,Ski):
 
         self.logger.info("开始测试 test_user_basecase")
         role_user={'name':'admin'}
-        user_data=DT("users.oneuser").json()
+        user_data=DT.excel("users.oneuser")
         self.logger.info("获取待替新增用户数据: {0}".format(user_data))
 
         self.logger.info("Step1: 新建用户")

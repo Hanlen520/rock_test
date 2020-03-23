@@ -15,16 +15,17 @@
 		"getCreateMenu":"keywords.menu.add_menu",
 		"getOneMenu":"keywords.menu.read_menu",
 		"getUpdataMenu":"keywords.menu.update_menu",
-		"getDeleteMenu":"keywords.menu.delete_menu"
+        "getDeleteMenu":"keywords.menu.delete_menu",
+        "requestFromModel":"keywords.requestModel.runModel"
     },
     "global_variable":{
-        "BASE_URL":"http://localhost:8089",
+        "BASE_URL":"http://www.agavetest.cn:8671",
         "logfile_path":"log/log.log",
         "log_level":"info"
     },
     "datatable":{
-        "db_type":"excel",
-        "db_path":".//testdata//testdata.xlsx"
+        "db_excel_path":"./testdata/testdata.xlsx",
+        "db_json_path":"./testdata/model/"
     }
 
 }
